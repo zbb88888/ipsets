@@ -15,16 +15,18 @@
 package ipsets
 
 import (
-	"fmt"
+	"github.com/prometheus/client_golang/prometheus"
+	log "github.com/sirupsen/logrus"
+
 	"regexp"
-	"strconv"
 	"strings"
+
+	"fmt"
+	"strconv"
 
 	"github.com/kubeovn/felix/ip"
 	"github.com/kubeovn/felix/labelindex"
 	"github.com/projectcalico/libcalico-go/lib/set"
-	"github.com/prometheus/client_golang/prometheus"
-	log "github.com/sirupsen/logrus"
 )
 
 var (
